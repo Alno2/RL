@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-import random
 import numpy as np
 
 from agent import Fish
@@ -157,7 +156,7 @@ class PlayerControllerRL(PlayerController, FishesModelling):
         self.allowed_movements()
         # ADD YOUR CODE SNIPPET BETWEEN EX. 2.1
         # Initialize a numpy array with ns state rows and na state columns with float values from 0.0 to 1.0.
-        Q = np.random.uniform(low=0.0, high=1.0, size=(ns, na))
+        Q = np.random.uniform(low=0, high=1, size=(ns, na))
         # ADD YOUR CODE SNIPPET BETWEEN EX. 2.1
 
         for s in range(ns):
@@ -307,7 +306,6 @@ class PlayerControllerRandom(PlayerController):
                 # ADD YOUR CODE SNIPPET BETWEEN EX. 1.2
                 # Chose an action from all possible actions and add to the counter of actions per state
                 action = np.random.choice(possible_actions)   
-                n[s_current, action] += 1
                 # ADD YOUR CODE SNIPPET BETWEEN EX. 1.2
 
                 action_str = self.action_list[action]
