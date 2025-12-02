@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # rewards: [golden_fish, jellyfish_1, jellyfish_2, ... , step]
-rewards = [10, -10, -10, 10, -10, 10, -10, 10, -10, 10, -10, 10, -10]
+# Never catching any Fish, including the King Fish
+rewards = [-10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, 0]
 
 # Q learning learning rate
 alpha = 0
